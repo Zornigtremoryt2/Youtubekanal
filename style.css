@@ -1,74 +1,103 @@
-/* Logo */
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', Arial, sans-serif;
+  background: linear-gradient(135deg, #181a20 0%, #232946 100%);
+  color: #eaeaea;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+}
+
 .logo {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   margin: 20px auto 10px auto;
   display: block;
+  border-radius: 50%;
+  box-shadow: 0 0 30px #00ffc6, 0 0 10px #232946 inset;
+  background: #232946;
 }
 
 .slogan {
-  font-size: 1.2em;
-  color: #ffd700;
+  font-size: 1.3em;
+  color: #00ffc6;
   text-align: center;
   margin-bottom: 10px;
+  text-shadow: 0 0 8px #00ffc6, 0 0 2px #232946;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #00ffc6;
+  text-shadow: 0 0 12px #00ffc6;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #eaeaea;
+}
+
+nav {
+  margin-top: 1rem;
+}
+nav a {
+  color: #00ffc6;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px #00ffc6;
 }
 
 main {
   max-width: 900px;
   margin: 40px auto;
-  background: #fff;
+  background: rgba(35,41,70,0.95);
   padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #00ffc6;
 }
 
 section {
-  margin-bottom: 40px;
+  max-width: 900px;
+  margin: 2rem auto 40px auto;
+  padding: 0 1rem;
+}
+
+h2, h3, h4 {
+  color: #00ffc6;
+  text-shadow: 0 0 6px #00ffc6;
+}
+
+p {
+  color: #eaeaea;
+  line-height: 1.6;
 }
 
 .angebot-list {
   list-style: disc;
   margin-left: 30px;
   margin-top: 20px;
+  color: #00ffc6;
+  font-size: 1.1em;
 }
 
-/* Buttons */
-button, .navbar a, .kontakt-formular button {
-  transition: background 0.2s, color 0.2s;
-}
-
-/* Responsive Design */
-@media (max-width: 700px) {
-  main {
-    padding: 10px;
-  }
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-  }
-  .logo {
-    width: 60px;
-    height: 60px;
-  }
-  .video-wrapper iframe {
-    width: 100% !important;
-    height: 200px !important;
-  }
-}
-
-/* Barrierefreiheit */
-img[alt], iframe[title] {
-  outline: 2px solid #ffd700;
-}
-/* Kontaktformular */
 .kontakt-formular {
   max-width: 400px;
   margin: 30px auto;
   padding: 20px;
-  background: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  background: #232946;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #00ffc6;
   display: flex;
   flex-direction: column;
 }
@@ -76,84 +105,41 @@ img[alt], iframe[title] {
   margin-top: 10px;
   margin-bottom: 4px;
   font-weight: 500;
+  color: #00ffc6;
 }
 .kontakt-formular input,
 .kontakt-formular textarea {
   padding: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #00ffc6;
   border-radius: 4px;
   margin-bottom: 12px;
   font-size: 1em;
+  background: #181a20;
+  color: #eaeaea;
 }
 .kontakt-formular button {
-  background: #222;
-  color: #fff;
+  background: #00ffc6;
+  color: #232946;
   border: none;
   padding: 10px 0;
   border-radius: 4px;
   font-size: 1em;
   cursor: pointer;
   font-weight: bold;
+  box-shadow: 0 0 8px #00ffc6;
 }
 .kontakt-formular button:hover {
-  background: #ffd700;
-  color: #222;
-}
-/* Grundlayout */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #121212;
-
-  width: 100%;
-  height: 100%;
-  padding: 2rem;
+  background: #232946;
+  color: #00ffc6;
+  box-shadow: 0 0 16px #00ffc6;
 }
 
-header h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-header p {
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
-}
-
-nav {
-  margin-top: 1rem;
-}
-
-nav a {
-  color: #00ffcc;
-  margin: 0 1rem;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Sektionen */
-section {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-h2 {
-  color: #00ffcc;
-}
-
-/* Video-Embed */
 .video-wrapper {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
 }
-
 .video-wrapper iframe {
   position: absolute;
   top: 0;
@@ -163,7 +149,6 @@ h2 {
   border: none;
 }
 
-/* Community-Links */
 .links {
   list-style: none;
   padding: 0;
@@ -171,25 +156,61 @@ h2 {
   gap: 1rem;
   flex-wrap: wrap;
 }
-
 .links li a {
-  background: #00ffcc;
-  color: #121212;
+  background: #00ffc6;
+  color: #232946;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
+  box-shadow: 0 0 8px #00ffc6;
 }
-
 .links li a:hover {
-  background: #00e6b8;
+  background: #232946;
+  color: #00ffc6;
+  box-shadow: 0 0 16px #00ffc6;
 }
 
-/* Footer */
 footer {
-  background: #1e1e1e;
+  background: #181a20;
+  color: #00ffc6;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding: 18px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 40px;
+  border-top: 4px solid #00ffc6;
   font-size: 0.9rem;
+}
+footer a {
+  color: #00ffc6;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: bold;
+}
+footer a:hover {
+  color: #fff;
+}
+
+img[alt], iframe[title] {
+  outline: 2px solid #00ffc6;
+}
+
+@media (max-width: 700px) {
+  main {
+    padding: 10px;
+  }
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+  .video-wrapper iframe {
+    width: 100% !important;
+    height: 200px !important;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
 }
