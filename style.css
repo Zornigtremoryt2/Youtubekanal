@@ -1,3 +1,104 @@
+/* Logo */
+.logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 20px auto 10px auto;
+  display: block;
+}
+
+.slogan {
+  font-size: 1.2em;
+  color: #ffd700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+.angebot-list {
+  list-style: disc;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+/* Buttons */
+button, .navbar a, .kontakt-formular button {
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+  main {
+    padding: 10px;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+  .video-wrapper iframe {
+    width: 100% !important;
+    height: 200px !important;
+  }
+}
+
+/* Barrierefreiheit */
+img[alt], iframe[title] {
+  outline: 2px solid #ffd700;
+}
+/* Kontaktformular */
+.kontakt-formular {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+}
+.kontakt-formular label {
+  margin-top: 10px;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+.kontakt-formular input,
+.kontakt-formular textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  font-size: 1em;
+}
+.kontakt-formular button {
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: bold;
+}
+.kontakt-formular button:hover {
+  background: #ffd700;
+  color: #222;
+}
 /* Grundlayout */
 body {
   margin: 0;
