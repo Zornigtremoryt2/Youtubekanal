@@ -1,0 +1,2 @@
+# Ignore node_modules to avoid Liquid parsing errors in third-party README files
+backend/node_modules
