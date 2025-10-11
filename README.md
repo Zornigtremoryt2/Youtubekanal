@@ -40,3 +40,6 @@ curl http://localhost:3000/me
 
 ## Hinweise
 - Für Produktion sichere Passwörter und HTTPS verwenden!
+
+## Repository-Umzug
+Dieses Repository wurde auf `Zornigtremoryt2/kanal` verschoben. Die GitHub Pages Workflow-Datei ist generisch und benötigt keine Änderungen – die Actions laufen automatisch im aktuellen Repository.
